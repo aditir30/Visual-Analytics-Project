@@ -20,7 +20,7 @@ We analyze this data using three visualizations
 ![image](https://i.imgur.com/bQCTsC2.png)
 
 #### 3. Wage data exploration using a heat map which indicates the trend of specific categories of wages from 1968 to 2020 
-![image](https://i.imgur.com/vN8XwOn.png)
+![image](https://i.imgur.com/gzaos7x.png)
   
 ### Running the code:
   To run the project:
