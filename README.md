@@ -15,11 +15,12 @@ We analyze this data using three visualizations
 #### 1. An interactive choropleth map which indicates the average state wages since the past 5 years across all states. 
 ![image](https://i.imgur.com/Gk4FiSB.png)
 
-#### 2. An interactive bar chart that displays either the state minimum wage, federal minimum wage, or effective minimum wage for a specific year that is chosen with the help of a slider. 
+#### 2. An interactive bar chart that displays either the state minimum wage, federal minimum wage, or effective minimum wage for a specific year which can chosen by the user with the help of a slider. 
 ![image](https://i.imgur.com/cq8xxaY.png)
-
-#### 3. An interactive scatter plot that displays either the state minimum wage, federal minimum wage, or effective minimum wage for a specific year that is chosen with the help of a slider. 
 ![image](https://i.imgur.com/bQCTsC2.png)
+
+#### 3. Wage data exploration using a heat map which indicates the trend of specific categories of wages from 1968 to 2020 
+![image](https://i.imgur.com/vN8XwOn.png)
   
 ### Running the code:
   To run the project:
