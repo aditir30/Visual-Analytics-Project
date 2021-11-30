@@ -12,10 +12,10 @@ Multiple factors influence the selected minimum wage. Some of these include:
 <li> Poverty Threshold
 
 We analyze this data using three visualizations
-#### 1. An interactive choropleth map which indicates the average state wages since the past 5 years across all states. 
+#### 1. An interactive choropleth map which indicates the average state wages since the past 5 decades across all states. 
 ![image](https://i.imgur.com/Gk4FiSB.png)
 
-#### 2. An interactive bar chart that displays either the state minimum wage, federal minimum wage, or effective minimum wage for a specific year which can chosen by the user with the help of a slider. 
+#### 2. An interactive bar chart and a scatter plot that displays either the state minimum wage, federal minimum wage, or effective minimum wage for a specific year which is chosen by the user. 
 ![image](https://i.imgur.com/cq8xxaY.png)
 ![image](https://i.imgur.com/bQCTsC2.png)
 
