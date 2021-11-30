@@ -6,7 +6,7 @@ from vega_datasets import data
 from altair.expr import datum
 
 st.title("Minimum Wages Through Ages")
-st.markdown('The aim of this project is to visualise the state, federal, and effective minimum wages in the United states from the year 1968 to 2020. For a brief understanding, we use a visualisation of a choropleth map showing the average state minimum wages across the United States since the past 5 decades. We can understand the change in the wages across the years using a bar chart or a scatter plot.')
+st.markdown('The aim of this project is to visualize the state, federal, and effective minimum wages in the United States from the year 1968 to 2020. For a brief understanding, we use a bar chart and a scatter plot to analyze the change in the wages across the years, a choropleth map showing the average state minimum wages across the United States since the past 5 decades, and a heatmap visualizing the data and its distributions.')
 
 
 #Common data
