@@ -14,11 +14,11 @@ df = pd.read_csv('min_wage_data.csv',usecols=['year','state_id','state_min_wage'
 wages=['state_min_wage','fed_min_wage','effective_min_wage','state_min_wage_2020','fed_min_wage_2020','effective_min_wage_2020']
 
 
+#Selection box
+sel = st.selectbox('Choose a visualization',('--','Wage Statistics of the United States','Average State Minimum Wages','Wage Data Exploration'))
 
-sel = st.selectbox('Choose a visualization',('--','Bar Chart' ,'Scatter Plot','Choropleth'))
-
-#BAR CHART
-if sel=='Bar Chart':
+#Wage Data Statistic using bar chart and scatter plot
+if sel=='Wage Statistics of the United States':
     year_select=st.sidebar.slider('Select Year',1968,2020)
     wage_select=st.sidebar.selectbox("Select the type of wage",wages)
     title= "Wage Statistics of USA in "+ str(year_select)
@@ -35,13 +35,7 @@ if sel=='Bar Chart':
         height=500,
         title=title
     )
-    st.altair_chart(bar)
-  
-#SCATTER PLOT
-if sel=='Scatter Plot':
-    year_select=st.sidebar.slider('Select Year',1968,2020)
-    wage_select=st.sidebar.selectbox("Select the type of wage",wages)
-    title= "Wage Statistics of USA in "+ str(year_select)
+    
     scatterplot = alt.Chart(df).mark_circle(size=70,opacity=1).encode(
         x=alt.X('state_id',title='States',type='ordinal'),
         y=alt.Y(wage_select,type='quantitative'),
@@ -49,10 +43,12 @@ if sel=='Scatter Plot':
         alt.FieldEqualPredicate(field='year', equal=year_select)
     ).properties(projection={'type': 'albersUsa'},width=800,height=500,title=title)
 
+    st.altair_chart(bar)
     st.altair_chart(scatterplot)
+    
 
-#CHOROPLETH
-if sel == 'Choropleth':
+#Average State Wage Choropleth Representation
+if sel == 'Average State Minimum Wages':
     title = 'Average State Minimum Wages for the past 5 decades'
     df_map = pd.read_csv('name_code_mapping_US.csv')
     df_join = pd.merge(df, df_map, left_on='state_id', right_on='Full_Name')
@@ -75,7 +71,7 @@ if sel == 'Choropleth':
         stroke='white'
     ).encode( 
         color=color, 
-        tooltip=['state_id:O', 'state_min_wage:Q']
+        tooltip=[alt.Tooltip('state_id:O', title='State'),alt.Tooltip('state_min_wage:Q', title='Avg. Min Wage')]
     ).add_selection(
         multi
     ).transform_lookup(
@@ -91,5 +87,25 @@ if sel == 'Choropleth':
     c1 = alt.layer(choro)
     st.altair_chart(c1)
 
+
+#Wage Data Exploration with Heat Map
+if sel=='Wage Data Exploration':
+    title = "Trend in Wages Increment"
+    df_map = pd.read_csv('name_code_mapping_US.csv')
+    df_join = pd.merge(df, df_map, left_on='state_id', right_on='Full_Name')
+
+    wage_select=st.selectbox("Select the type of wage",list(wages),index=0)
+
+    heatmap = alt.Chart(df_join).mark_rect().encode(
+    x = alt.X('year:O', title ='Year'),
+    y = alt.Y('state_id:O', title = 'States'),
+    color = alt.Color(wage_select+':Q')
+    ).properties(
+    width=1000,
+    height=800,
+    title = "Trend in Wage Increment"
+    ).interactive()
+    
+    st.altair_chart(heatmap)
 
 
