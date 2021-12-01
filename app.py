@@ -15,7 +15,7 @@ st.markdown('The aim of this project is to visualize the state, federal, and eff
 #Importing Datasets
 df = pd.read_csv('min_wage_data.csv',usecols=['year','state_id','state_min_wage','fed_min_wage','effective_min_wage','state_min_wage_2020','fed_min_wage_2020','effective_min_wage_2020'],encoding='cp1252')
 df = df.rename(columns={'fed_min_wage':'Federal Minimum Wage','effective_min_wage':'Effective Minimum Wage','state_min_wage':'State Minimum Wage','state_min_wage_2020':'State Minimum Wage in 2020','fed_min_wage_2020':'Federal Minimum Wage in 2020','effective_min_wage_2020':'Effective Minimum Wage in 2020'})
-wages=['State Minimum Wage','Federal Minimum Wage','Effective Minimum Wage','State Minimum Wage in 2020','Federal Minimum Wage in 2020','Effective Minimum Wage in 2020']
+wages=['State Minimum Wage','Federal Minimum Wage','Effective Minimum Wage','State Minimum Wage 2020 Estimate','Federal Minimum Wage 2020 Estimate','Effective Minimum Wage 2020 Estimate']
 
 #Selection box for visualizations
 sel = st.selectbox('Choose a visualization',('--','Wage Statistics of the United States','Average State Minimum Wages','Wage Data Exploration'))
