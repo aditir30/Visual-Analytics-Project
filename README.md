@@ -1,6 +1,9 @@
 # Visual Analytics Project
+
+#### Checkout our app on Heroku : https://uncc-va-streamlit.herokuapp.com/
+
 # **Minimum Wages through Ages:**
-### Team Members : Nidhi Gowri Srinath, Aditi Anil Raghuvanshi, Sharat Sindhoor, Pranusha Apuri
+### Team Members : Nidhi Gowri Srinath, Aditi Anil Raghuwanshi, Sharat Sindhoor, Pranusha Apuri
 A project to understand the changes to the federal, state, and effective minimum wages across the United States. This project aims to visualize the change in wages from the years 1968 to 2020.
 
 The minimum wage is the lowest wage per hour that a worker may be paid as mandated by federal law. In the United States, states and the federal government set minimum hourly pay or a minimum wage that ensures a  quality of life that its citizens are bound to. Increased minimum wages aid the increase in productivity, company turnovers, and the economy. Even though the United States enforces a federal minimum wage, individual states, cities, and localities may pass different minimum wage requirements provided the stipulated hourly wage is not lower than the federal minimum wage. The decided minimum wage of a state is indicative of the specific state's cost of living. 
@@ -30,8 +33,5 @@ We analyze this data using three visualizations
   > <li> View and interact with the visualizations on the streamlit app in your browser </li>
 
 These visualizations have been deployed as a streamlit app with the help of altair and python.
-  
-  
-
 
 
